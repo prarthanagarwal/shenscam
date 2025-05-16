@@ -1,0 +1,19 @@
+Same Font:
+- Title & Heading (Bold + Caps)
+
+Font: Montesrat
+Color 1: #a52121
+Color 2: #fbf4eb
+
+---------------------------------------
+NavBar Switch
+
+home ----> work
+work ----> home 
+
+---------------------------------------
+Shenil ka kaam:
+- Give lots and lots of images (gallery)
+- give illustrations for cards
+- description text for ad work
+- figure out about me

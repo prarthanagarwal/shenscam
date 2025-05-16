@@ -1,0 +1,52 @@
+/* Import Montserrat from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- Custom twitch animation for album hover --- */
+@keyframes twitch {
+  0% { transform: rotate(-2deg) scale(1.02); }
+  20% { transform: rotate(2deg) scale(0.98); }
+  40% { transform: rotate(-1deg) scale(1.01); }
+  60% { transform: rotate(1deg) scale(0.99); }
+  80% { transform: rotate(-1deg) scale(1.01); }
+  100% { transform: rotate(0deg) scale(1); }
+}
+.twitch-hover:hover, .twitch-hover:focus {
+  animation: twitch 0.25s linear;
+}
+
+@layer base {
+  :root {
+    /* Theme colors */
+    --background: #fbf4eb;
+    --foreground: #09090b;
+    --card: #ffffff;
+    --card-foreground: #09090b;
+    --popover: #ffffff;
+    --popover-foreground: #09090b;
+    --primary: #c4b5fd;
+    --primary-foreground: #ffffff;
+    --secondary: #e4e4e7;
+    --secondary-foreground: #18181b;
+    --muted: #e4e4e7;
+    --muted-foreground: #71717a;
+    --accent: #e4e4e7;
+    --accent-foreground: #18181b;
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --border: #e4e4e7;
+    --input: #e4e4e7;
+    --ring: #c4b5fd;
+    
+    /* Custom brand colors */
+    --maroon-bg: #d13845;
+    --cream-bg: #ffebb5;
+    --folder-pink: #ec3e85;
+    
+    /* Border radius */
+    --radius: 1rem;
+  }
+}
