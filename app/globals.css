@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--radius: 0.5rem;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	background: #fafafa;
+	color: #09090b;
+}
+
+/* Sticker hooks - position these however you like */
+.sticker {
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+}
+.sticker-bread { /* example defaults - feel free to override */
+    top: 15%;
+    right: 5%;
+}
+.sticker-rules {
+    top: 10%;
+    right: 60%;
+	z-index: 0;
+}
+.sticker-mug {
+    top: 7%;
+    left: 3%;
+}
+.sticker-camera {
+    bottom: 12%;
+    right: 5%;
+}

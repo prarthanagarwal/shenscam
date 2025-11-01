@@ -1,0 +1,35 @@
+.main{
+    background: #000;
+}
+.gallery{
+    height: 175vh;
+    background: rgb(45, 45, 45);
+    position: relative;
+    display: flex;
+    gap: 2vw;
+    padding: 2vw;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.spacer{
+    height: 100vh;
+}
+
+/* Top-level class exports for the reusable component */
+.column{
+    position: relative;
+    height: 100%;
+    width: 25%;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.imageContainer{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border-radius: 1vw;
+    overflow: hidden;
+}

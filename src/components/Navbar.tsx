@@ -1,11 +1,12 @@
+"use client";
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { ArrowLeft, User, Archive } from '@phosphor-icons/react';
 import { pageStyles, themeColors } from '../lib/utils';
 
 const Navbar = () => {
-  const location = useLocation();
-  const currentPath = location.pathname;
+  const currentPath = usePathname();
 
   // Hide navbar on index page
   if (currentPath === '/') {
@@ -18,7 +19,7 @@ const Navbar = () => {
         {/* Left Section */}
         <div>
           <Link 
-            to="/" 
+            href="/" 
             className="font-['Montserrat'] flex items-center gap-2 group text-[#1d1306] hover:underline decoration-1 underline-offset-4 transition-all"
           >
             <ArrowLeft size={20} className="text-[#1d1306] opacity-80 group-hover:opacity-100 transition-opacity" weight="bold" />
@@ -29,7 +30,7 @@ const Navbar = () => {
         {/* Right Section */}
         <div className="flex items-center gap-8">
           <Link 
-            to="/about" 
+            href="/about" 
             className={`font-['Montserrat'] flex items-center gap-2 group text-[#1d1306] ${currentPath !== '/about' && 'hover:underline'} decoration-1 underline-offset-4 transition-all`}
           >
             <User 
@@ -41,7 +42,7 @@ const Navbar = () => {
           </Link>
           
           <Link 
-            to="/work" 
+            href="/work" 
             className={`font-['Montserrat'] flex items-center gap-2 group text-[#1d1306] ${!currentPath.startsWith('/work') && 'hover:underline'} decoration-1 underline-offset-4 transition-all`}
           >
             <Archive 

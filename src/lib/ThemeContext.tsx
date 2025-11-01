@@ -1,3 +1,4 @@
+"use client";
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import theme, { Theme } from './theme';
 
@@ -59,5 +60,3 @@ export const useTheme = () => {
   }
   return context;
 };
-
-export default ThemeProvider; 

@@ -1,3 +1,8 @@
+# Shenscam (Next.js 15 + React 19)
+
+Migrated to Next.js 15 App Router with TailwindCSS and planned smooth-scroll stack.
+
+---
 # Welcome to your Lovable project
 
 ## Project info
