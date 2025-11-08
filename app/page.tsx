@@ -3,11 +3,11 @@ import Link from 'next/link';
 import Card from '@/components/folder-card';
 
 const WorkFolders = [
-    { title: 'Camera Work', path: '/cam_work', style: 'top-[15%] right-[15%]' },
-    { title: 'Shot on iPhone', path: '/work/iphone', style: 'top-[40%] right-[-1%]' },
-    { title: 'Edit Work', path: '/work/edit', style: 'bottom-[7%] right-[7%]' },
-    { title: 'Production Work', path: '/work/production', style: 'top-[30%] left-[10%]' },
-    { title: 'A.D. Work', path: '/work/ad', style: 'bottom-[15%] left-[20%]' },
+    { title: 'Camera Work', path: '/cam_work', style: 'top-[12%] right-[21%]' },
+    { title: 'Shot on iPhone', path: '/work/iphone', style: 'top-[40%] right-[5%]' },
+    { title: 'Edit Work', path: '/work/edit', style: 'bottom-[12%] right-[17%]' },
+    { title: 'Production Work', path: '/work/production', style: 'top-[30%] left-[5%]' },
+    { title: 'A.D. Work', path: '/work/ad', style: 'bottom-[15%] left-[15%]' },
 ];
 
 export default function HomePage() {
@@ -31,14 +31,20 @@ export default function HomePage() {
                     <div key={folder.path} className={`absolute ${folder.style} group flex flex-col items-center`}>
                         <Link
                             href={folder.path}
-                            className="pointer-events-auto scale-[0.286] origin-top-left transition-transform transform group-hover:scale-[0.316] inline-block"
-                            style={{ width: 'fit-content', height: 'fit-content' }}
+                            className="pointer-events-auto scale-[0.286] origin-center transition-transform transform group-hover:scale-[0.316] inline-block"
+                            style={{ 
+                                width: 'fit-content', 
+                                height: 'fit-content', 
+                                lineHeight: 0,
+                                display: 'block',
+                                marginBottom: '-45px'
+                            }}
                         >
                             <div className="w-40 h-28 md:w-56 md:h-36 relative">
                                 <Card />
                             </div>
                         </Link>
-                        <span className="pointer-events-none font-['Montserrat'] text-[12px] md:text-[30px] text-[#1d1306] mt-3 opacity-90 group-hover:opacity-100 transition-opacity text-center whitespace-nowrap">
+                        <span className="pointer-events-none font-['Montserrat'] text-[10px] md:text-[14px] text-[#1d1306] opacity-90 group-hover:opacity-100 transition-opacity text-center whitespace-nowrap">
                             {folder.title}
                         </span>
                     </div>
